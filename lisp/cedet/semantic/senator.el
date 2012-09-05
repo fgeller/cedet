@@ -369,7 +369,7 @@ Uses `semanticdb' when available."
     (if tagsa
         tagsa
       ;; If the analyzer fails, then go into boring completion
-      (if (and (featurep 'semanticdb) (semanticdb-minor-mode-p))
+      (if (and (featurep 'semantic/db) (semanticdb-minor-mode-p))
 	  (semanticdb-fast-strip-find-results
 	   ;; semanticdb version returns a list of (DB-TABLE . TAG-LIST)
 	   (semanticdb-deep-find-tags-for-completion prefix))
